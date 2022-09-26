@@ -1,0 +1,2 @@
+a="antonio"
+print ("hola "+a)
