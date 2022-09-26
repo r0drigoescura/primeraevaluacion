@@ -1,0 +1,4 @@
+a="antonio"
+b="lopez"
+c=a+b
+print (a+b)
