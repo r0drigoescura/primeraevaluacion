@@ -1,0 +1,11 @@
+#Este programa te pergunta que hora es y te respode buenos dias, tardes o noches de acuerdo con la hora
+def saludador_2():
+    hora=int(input("Dime que hora es: "))
+    if(hora>=6 and hora<=12):
+        print("buenos dias")
+    else:
+        if(hora>12 and hora<=20):
+            print(" Buenas tardes")
+        else:
+            print("Buenas noches")
+saludador_2()
