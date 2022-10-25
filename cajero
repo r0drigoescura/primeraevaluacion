@@ -1,0 +1,64 @@
+print("********************************************************")
+print("")
+print("             *           MENU            *")
+print("")
+print("Si quieres meter dinero escribe 'ingresar'")
+print("Si quieres sacar dinero escribe 'retirar'")
+print("Si quieres saber cuanto dinero tienes escribe 'cuenta'")
+print("Si quieres salir escribe 'salir'")
+print("")
+print("********************************************************")
+
+
+dinero=0
+
+def pregunta_():
+    print("")
+    p = input("¿Qué quieres hacer?: ")
+    if(p == "ingresar"):
+        ingresar_()
+    else:
+        if(p == "retirar"):
+            if(dinero==0):
+                print("No puedes realizar esa operacion")
+                pregunta_()
+            else:    
+                retirar_()
+        else:
+            if(p == "cuenta"):
+                cuenta_()
+            else:
+                if(p == "salir"):
+                    salir_()
+                else:
+                    print("Esta operacion no es valida")
+                    pregunta_()
+def ingresar_():
+    global dinero
+    n1=int(input("¿Cuanto dinero quieres ingresar? "))
+    if (n1<0):
+        print("No puedes ingresr una cantidad negativa")
+        ingresar_()
+    else:
+        dinero=dinero+n1
+        print (f"Has ingresado {n1}€.")
+        print (f"Tienes {dinero}€ en la cuenta.")
+        pregunta_()
+def retirar_():
+    global dinero
+    n2=int(input("¿Cuanto dinero quieres retirar? "))
+    if(n2>dinero):
+        print("No tienes tanto dinero")
+        retirar_()
+    else:
+        dinero=dinero-n2
+        print(f"Has retirado {n2}€.")
+        print(f"Te quedan {dinero}€.")
+        pregunta_()
+def cuenta_():
+    print(f"Tienes {dinero}€.")
+    pregunta_()
+def salir_():
+    print("Muchas gracias")
+
+pregunta_()
