@@ -1,0 +1,9 @@
+# Otro programa mas con bucles
+#sumas los numeros pares hasta el cien
+def sumar_pares():
+    suma_par=0
+    for cont in range(0,100,2):
+        print (cont)
+        suma_par=suma_par+cont
+    print ("La suma de los pares= "+ str(suma_par))
+sumar_pares()
