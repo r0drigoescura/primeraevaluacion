@@ -1,0 +1,16 @@
+def ej():
+    lengua=(int(input("Introduce la nota de Lengua: ")))
+    ingles=(int(input("Introduce la nota de Ingles: ")))
+    mates=(int(input("Introduce la nota de Mates: ")))
+    historia=(int(input("Introduce la nota de Historia: ")))
+    notas=lengua,ingles,mates,historia
+    if not(0<lengua<=10 or 0<ingles<=10 or 0<mates<=10 or 0<historia<=10):
+        print("Notas no validas")
+        ej()
+    else:
+        print("La nota maxima es ",max(notas))
+        print("La nota minima es ",min(notas))
+        media=float((lengua+ingles+mates+historia)/4)
+        print("La media es",media)
+ej()
+    
