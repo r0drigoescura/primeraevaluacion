@@ -12,8 +12,11 @@ def ej():
     else:
         print("La nota maxima es ",max(notas))
         print("La nota minima es ",min(notas))
+        print("El rango es",(max(notas)-min(notas)))
         media=float((lengua+ingles+mates+historia+dibujo+fisica)/6)
+        desviacion=((abs(lengua-media)+abs(ingles-media)+abs(mates-media)+abs(historia-media)+abs(fisica-media)+abs(dibujo-media))/media)
+        desviacion1=round(desviacion)
+        print("La desviacion es ",desviacion1)
         total=round(media,2)
         print("La media es",total)
 ej()
-    
